@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1 {
+				width: 100px;
+				height: 100px;
+				background: yellow;
+			}
+		</style>
+		<script type="text/javascript" src="../jquery-1.11.1.js">
+			
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				console.log($("div").css("width"));
+				$("button").click(function(){
+					$("div").attr("title",666); 
+//					$("div").title=111;
+					console.log($("div").attr("title"));
+//					$("input:radio").removeAttr("checked");
+					$("div").removeAttr("class");
+//					$("input:radio").prop("checked",false);
+					$("input:radio").removeProp("checked");
+//					$("input:radio").attr("checked",true);
+					console.log($("input:text").attr("value"));
+					console.log($("input:text").val());
+					console.log($("span").text());
+					console.log($("span").html());
+				}); 
+			});
+		</script>
+	</head>
+	<body>
+		<button>按钮</button>
+		<div class="div1"></div>
+		<input type="radio" checked/>
+		<input type="text" value="我是"/>
+		<span>666</span>
+	</body>
+</html>

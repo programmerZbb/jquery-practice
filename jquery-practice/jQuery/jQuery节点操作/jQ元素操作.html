@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>元素操作</title>
+	<script type="text/javascript" src="../jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				// $("ul").append("<li>我是newli</li>");
+				var newLi = $("<li>我是newli</li>");
+				// $("li").before(newLi);
+				// $("ul").append(newLi);
+				// newLi.appendTo("ul");
+				// $("ul").prepend(newLi);
+				
+				// $(".lic").after(newLi);
+				// $(".lic").before(newLi);
+				// $(newLi).insertAfter(".lic");
+				// $(newLi).insertBefore(".lic");
+				
+				//删除和清空节点
+				// $("ul").html("");
+				// $("ul").empty();
+				// $("li").remove(".lic");
+				$(".lic").click(function(){
+					alert(1);
+				});
+				$(".lic span").click(function(){
+					alert(2);
+				});
+				var li1= $(".lic").clone(true,false);
+				// $("ul").append(li1);
+				
+				//替换
+				// $(".lic").replaceWith(newLi);
+				$("ul").append($(".lic"));
+			});
+		});
+	</script>
+</head>
+<body>
+	<button>添加</button>
+	<ul>
+		<li class="lic">"土著li1"<span>我是span</span></li>
+		<li>"土著li"</li>
+		<li>"土著li"</li>
+	</ul>
+</body>
+</html>

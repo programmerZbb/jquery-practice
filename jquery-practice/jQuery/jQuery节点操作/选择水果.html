@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择水果</title>
+	<style type="text/css">
+		select {
+			width:170px;
+			height: 240px;
+			font-size: 18px;
+			background: #11E61E;
+		}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").eq(0).click(function(){
+				$(".right").append($(".left").children());
+			});
+			$("button").eq(1).click(function(){
+				$(".left").append($(".right").children());
+			});
+			$("button").eq(2).click(function(){
+				$(".right").append($(".left option:selected"));
+				// alert(1);
+			});
+			$("button").eq(3).click(function(){
+				$(".left").append($(".right option:selected"));
+				// alert(1);
+			});
+			// $("body").click(function(){
+			// });
+			// $("option").attr("selected","selected");
+			// $("select").mouseleave(function(){
+			// 	$("body").click(function(){
+			// 		$("option:selected").attr("selected",false);
+			// 	});
+			// });
+			// $("select").mouseenter(function(){
+			// 	$("option").click(function(){
+			// 		$(this).attr("selected","selected");
+			// 	});
+			// });
+		});
+	</script>
+</head>
+<body>
+	<select class="left" size="10" multiple>
+		<option>苹果</option>
+		<option>香蕉</option>
+		<option>橘子</option>
+		<option selected>葡萄</option>
+	</select>
+	<button>>></button>
+	<button><<</button>
+	<button>></button>
+	<button><</button>
+	<select class="right" size="10" multiple>
+		<!-- <option>苹果</option>
+		<option>香蕉</option>
+		<option>橘子</option>
+		<option>葡萄</option> -->
+	</select>
+</body>
+</html>

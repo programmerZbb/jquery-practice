@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态创建元素</title>
+	<script type="text/javascript" src="../jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $("div").append($("<i>我是i创建出来的</i>"));
+			// $("div").html("<i>我是i</i>");
+			var jQspan = $("<span>span对象</span>")
+			var span = document.createElement("span");
+			console.log(jQspan);
+			console.log(span);
+		});
+	</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

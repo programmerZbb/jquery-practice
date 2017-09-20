@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义动画</title>
+	<style type="text/css">
+		div {
+			background: yellow;
+			width: 100px;
+			height: 100px;
+			/*display: none;*/
+			position: absolute;
+			/*border-radius:*/
+			/*opacity: 1;*/
+		}
+	</style>
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("button").eq(0).click(function(){
+				$("div").animate({"width":200,"height":200,"borderRadius":20,"top":200,"left":200},2000,function(){
+					$("div").animate({"width":100,"height":100,"borderRadius":0,"top":50,"left":0},2000);
+				});
+			});
+			//模仿show方法
+			$("button").eq(1).click(function(){
+				$("div").animate({"opacity":0,"width":0,"height":0},2000);
+				// $("div").show();
+			});
+			$("button").eq(2).click(function(){
+				$("div").stop();
+			});
+		});
+	</script>
+</head>
+<body>
+	<button>按钮</button>
+	<button>按钮</button>
+	<button>按钮</button>
+	<button>按钮</button>
+	<div></div>
+</body>
+</html>

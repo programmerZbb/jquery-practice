@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.11.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+//				$("ul:eq(0)").css("background","pink");
+//				$("ul li:odd").css("background","pink");
+//				$("ul>li").css("background","blue");
+//				$(".li1").css("background","blue");
+//				$("li:eq(0)").css("background","blue");
+//				$("li:odd").css("background","yellow");
+//				$("ul").find(".li1").css("background","red");
+//				$("ul").children().css("background","pink");
+//				$(".li1").siblings().css("background","red");
+//				$(".li1").next().css("background","#000000");
+//				$("li").eq(0).css("background","blue");
+				$(".li1").parent("ul").css("background","#00FFFF");
+			});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>001</li>
+			<li>002</li>
+			<li>003</li>
+			<li class="li1">004</li>
+			<li>005</li>
+			<ol>
+				<li>111</li>
+				<li>222</li>
+				<li>333</li>
+			</ol>
+			<span>666</span><br />
+			<i>i区域</i>
+		</ul>
+	</body>
+</html>

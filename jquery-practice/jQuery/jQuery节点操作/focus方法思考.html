@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../jquery-1.11.1.js">
+			
+		</script>
+		<script type="text/javascript">
+//			window.onload = function(){
+//				var inp = document.getElementsByTagName("input")[0];
+////				inp.focus();
+//			}
+			$(document).ready(function(){
+				$("input:text").select(function(){
+//					alert(1);
+//					this.select();
+					alert(1);
+				});
+				
+				$("input:text").select();
+			});
+		</script>
+	</head>
+	<body>
+		<input type="text" value="我是大的"/>
+	</body>
+</html>

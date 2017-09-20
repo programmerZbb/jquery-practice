@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 400px;
+				height: 300px;
+				position: relative;
+				margin: 100px auto;
+				text-align: center;
+				font: 700 20px/20px simsun;
+			}
+			.inner {
+				position: absolute;
+				bottom: 0;
+				height: 250px;
+				width: 400px;
+				background: yellow;
+				font: 700 40px/250px simsun;
+			}
+		</style>
+		<script src="../jquery-1.11.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(document).keyup(function(event){
+//					alert(event.keyCode);
+					switch(event.keyCode){
+						case 66:
+							$(".inner").css("background","blue");
+							break;
+						case 80:
+							$(".inner").css("background","pink");
+							break;
+						case 89:
+							$(".inner").css("background","yellow");
+							break;
+						case 82:
+							$(".inner").css("background","red");
+							break;
+						case 79:
+							$(".inner").css("background","orange");
+							break;
+						default:
+							alert("没有发现这种颜色");
+							break;
+					}
+					$("span.val").text(event.keyCode);
+//					alert(event.keyCode);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<h1>按键变色</h1>
+			<div class="inner">
+				key的值为<span class="val">89</span>
+			</div>
+		</div>
+	</body>
+</html>

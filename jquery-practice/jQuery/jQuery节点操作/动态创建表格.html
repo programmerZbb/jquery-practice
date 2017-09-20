@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态创建表格</title>
+	<style type="text/css">
+		table {
+			border-collapse: collapse;
+			border: 1px solid #DECFCF;
+		}
+		th {
+			background: blue;
+			padding: 10px;
+			font: bold 20px "微软雅黑";
+			border: 1px solid #DECFCF;
+			color: white;
+		}
+		td {
+			border: 1px solid #DECFCF;
+			/*background: #B1A4A4;*/
+			font: 14px "微软雅黑";
+			padding: 10px;
+		} 
+		tbody tr{
+			padding: 10px;
+			background: white;
+		}
+		tbody tr:hover {
+			cursor: pointer;
+			background: #A29B9B;
+		}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+        	var data = [{
+                name: "传智播客",
+                url: "http://www.itcast.cn",
+                type: "IT最强培训机构"
+            }, {
+                name: "黑马程序员",
+                url: "http://www.itheima.com",
+                type: "大学生IT培训机构"
+            }, {
+                name: "传智前端学院",
+                url: "http://web.itcast.cn",
+                type: "前端的黄埔军校"
+            }];
+        	$("button").click(function(){
+        		for(var i=0;i<data.length;++i){
+        			$("tbody").append("<tr><td>"+data[i].name+"</td><td>"+data[i].url+"</td><td>"+data[i].type+"</td></tr>");
+        		    // $("tbody").append("<tr><td>111</td></tr>");
+        		}
+        	});
+        });    
+	</script>
+</head>
+<body>
+	<button>获取数据</button>
+	<table>
+		<thead>
+			<tr>
+				<th>标题</th>
+				<th>地址</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- <tr>
+				<td>001</td>
+				<td>002</td>
+				<td>003</td>
+			</tr> -->
+		</tbody>
+	</tabler
+</body>
+</html>

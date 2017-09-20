@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 200px;
+			background: pink;
+		}
+		.divc {
+			background: yellow;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $("button").eq(0).click(function(){
+			// 	$("div").addClass("divc");
+			// 	// alert(111);
+			// });
+			// $("button").eq(1).click(function(){
+			// 	$("div").removeClass("divc");
+			// });
+			
+			$("button:eq(0)").click(function(){
+				if($("div").hasClass("divc")){
+					$("div").removeClass("divc");
+				}else{
+					$("div").addClass("divc");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<button>按钮1</button>
+	<button>按钮2</button>
+	<div></div>
+</body>
+</html>

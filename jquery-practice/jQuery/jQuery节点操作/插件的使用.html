@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+            div {
+                background: pink;
+                height: 100px;
+                width: 200px;
+            }
+        </style>
+        <script src="../jquery-1.11.1.js"></script>
+        <script src="jquery.color.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("div").animate({"width":400,"height":300,"background-color":"yellow"},2000,function(){
+                        alert("执行完了！");
+                    });
+                });
+            });
+        </script>
+	</head>
+	<body>
+	    <button>背景色改变按钮</button>
+        <div></div>
+	</body>
+</html>

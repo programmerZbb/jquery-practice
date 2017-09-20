@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+            height: 100%;
+            float: left;
+        }
+        .wrap {
+            height: 250px;
+            width: 298px;
+            border: 1px solid pink;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        .left,.right {
+            width: 48px;
+        }
+        li {
+            cursor: pointer;
+        }
+        .left li,.right li {
+	        width: 48px;
+            border-bottom: 1px solid pink;
+            float: left;
+            text-align: center;
+            height: 27px;
+            line-height: 27px;
+            background: url(images/lili.jpg) repeat-x;
+/*
+            margin-top: -1px;
+            margin-left: -1px;
+*/
+        }
+        .left li:hover,.right li:hover {
+            background: url(images/abg.gif) repeat-x;
+        }
+        .center {
+            border-left: 1px solid pink;
+            border-right: 1px solid pink;
+        }
+/*
+        .center li{
+            display: none;
+        }
+*/
+        
+    </style>
+    <script src="../jquery-1.11.1.min.js">    </script>    
+    <script>    
+        $(window).ready(function(){
+            $(".left li").mouseenter(function(){
+//                $(".center li").hide();
+////                console.log($(this).index("li"));
+//                $(".center li").eq($(this).index("li")).show();
+                $(".center li").hide().eq($(this).index()).show();
+            });
+            $(".right li").mouseenter(function(){
+                $(".center li").hide();
+//                console.log($(this).index(".right li"));
+                $(".center li").eq(9+$(this).index(".right li")).show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="left">
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+            <li>04</li>
+            <li>05</li>
+            <li>06</li>
+            <li>07</li>
+            <li>08</li>
+            <li id="bottom">09</li>
+        </ul>
+        <ul class="center">
+            <li><img src="images/1.jpg" alt=""></li>
+            <li><img src="images/2.jpg" alt=""></li>
+            <li><img src="images/3.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+            <li><img src="images/5.jpg" alt=""></li>
+            <li><img src="images/6.jpg" alt=""></li>
+            <li><img src="images/7.jpg" alt=""></li>
+            <li><img src="images/8.jpg" alt=""></li>
+            <li><img src="images/9.jpg" alt=""></li>
+            <li><img src="images/10.jpg" alt=""></li>
+            <li><img src="images/11.jpg" alt=""></li>
+            <li><img src="images/12.jpg" alt=""></li>
+            <li><img src="images/13.jpg" alt=""></li>
+            <li><img src="images/14.jpg" alt=""></li>
+            <li><img src="images/15.jpg" alt=""></li>
+            <li><img src="images/16.jpg" alt=""></li>
+            <li><img src="images/17.jpg" alt=""></li>
+            <li><img src="images/18.jpg" alt=""></li>
+        </ul>
+        <ul class="right">
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li id="div2">19</li>
+        </ul>
+    </div>
+</body>
+</html>

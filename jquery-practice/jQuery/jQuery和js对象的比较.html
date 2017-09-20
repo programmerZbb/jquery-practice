@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				height: 100px;
+				
+			}
+		</style>
+		<script src="jquery-1.11.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var div = document.getElementById("divid");
+				var jQdiv = $("#divid");
+				var jQdiv1 = $("div");
+//				jQdiv.css("background","#D2691E");
+//				$(div).css("background","#00008B");
+				jQdiv.get(0).style.background = "yellow";
+				
+				console.log(div);
+				console.log(jQdiv);
+				console.log(jQdiv1);
+				console.log($(div));
+			});
+		</script>
+	</head>
+	<body>
+		<div id="divid">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul {
+				list-style: none;
+			}
+			li {
+				float:left;
+				font-size: 50px;
+				cursor: pointer;
+				color: red;
+			}
+		</style>
+		<script src="../jquery-1.11.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				var str1 = "☆";
+				var str2 = "★";
+//				var flag = true;
+				$("li").mouseenter(function(){
+					$(this).text(str2).prevAll().text(str2).end().nextAll().text(str1);
+					$("li").mousemove(function(){
+						window.getSelection().removeAllRanges();
+					});
+				});
+				$("li").on("mouseleave",function(){
+//					if(flag){
+//						$("li").text(str1);
+//					}
+					if($("li").hasClass("current")){
+						$("li.current").text(str2).prev().text(str2).end().nextAll().text(str1);
+					}else{
+						$("li").text(str1);
+					}
+				});
+				$("li").on("click",function(){
+//					flag = false;
+//					$(this).attr("class","current").siblings().removeClass("current");
+					$(this).attr("class","current").siblings().removeAttr("class");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+		</ul>
+	</body>
+</html>

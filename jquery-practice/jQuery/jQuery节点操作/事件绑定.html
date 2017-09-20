@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件绑定</title>
+	<style type="text/css">
+		div {
+			width: 100px;
+			height:100px;
+			background: pink;
+		}
+	</style>
+	<script type="text/javascript" src="../jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+//			 $("div").click(function(){
+//			 	alert(1);
+//			 });
+			// $("div").click(function(){
+			// 	alert(2);
+			// });
+			//传统绑定的解绑
+			//用任何一种解绑方式
+//			$(document).off("click");
+//			$("div").off("click");
+//			$(document).unbind("click","div");
+//			$("div").unbind("click");
+			
+//			$("div").on("click","a",function(){
+//				alert(1);
+//			});
+			
+//			$(document).on("click mouseenter","div",{"name":111},function(event){
+//				alert(event.data.name);
+//			});
+			//on()方法的解绑
+//			$(document).off("mouseenter");
+
+			//事件绑定的弃用方法两种
+//			$("div").bind("click",function(){
+//				alert(1);
+//			});
+//			$("div").unbind("click");
+			
+			//第二种
+			$(document).delegate("div","click",function(){
+				alert(1);
+			});
+			$(document).undelegate("click");
+		});
+	</script>
+</head>
+<body>
+	<div><a href="#">666</a></div>
+</body>
+</html>

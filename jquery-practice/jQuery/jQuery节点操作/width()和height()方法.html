@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width:100px;
+				height: 110px;
+				background: yellow;
+			}
+		</style>
+		<script type="text/javascript" src="../jquery-1.11.1.min.js">
+			
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				console.log($("div").width());
+				console.log($("div").height());
+				$("div").width(300);
+				$("div").height(300);
+			}); 
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+	</body>
+</html>

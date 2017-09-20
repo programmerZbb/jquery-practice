@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				background: yellow;
+			}
+		</style>
+		<script src="../jquery-1.11.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("div").click(function(){
+					alert(1);
+				});
+//				$("div").click();
+
+				$("input:text").focus(function(){
+					alert(1);
+				});
+//				$("input:text").focus();//触发浏览器行为
+//				$("input:text").trigger("focus");
+//				$("input:text").triggerHandler("focus");
+				$("a").click(function(){
+					alert(1);
+//					return false;
+				});
+//				$("a").click();
+//				$("a").trigger("click");
+				$("a").triggerHandler("click");
+			});
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<input type="text" />
+		<a href="http://www.baidu.com">444444</a>
+	</body>
+</html>

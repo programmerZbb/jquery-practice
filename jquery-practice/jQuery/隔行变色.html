@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("li:odd").css("background", "yellow");
+            $("li:even").css("background", "pink");
+            var color;
+            $("li").mouseenter(function(){
+                color = $(this).css("background");
+                $(this).css("background","blue");   
+            });
+            $("li").mouseleave(function(){
+                $(this).css("background",color);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>我不知道说些什么，我又不是诗人</li>
+        <li>我不知道说些什么，我又不是诗人</li>
+        <li>我不知道说些什么，我又不是诗人</li>
+        <li>我不知道说些什么，我又不是诗人</li>
+        <li>我不知道说些什么，我又不是诗人</li>
+    </ul>
+</body>
+
+</html>
